@@ -109,7 +109,7 @@ module Koudoku
     end
 
     def show_existing_subscription
-      if @owner.subscription.present?
+      if @owner.subscription.present? && @owner.subscription.persisted?
         redirect_to owner_subscription_path(@owner, @owner.subscription)
       end
     end
