@@ -41,7 +41,7 @@ module Koudoku
       template "app/models/subscription.rb"
 
       # Add the plans.
-      generate("model", "plan name:string stripe_id:string price:float interval:string features:text highlight:boolean display_order:integer")
+      generate("model", "plan name:string stripe_id:string price:float interval:string features:text highlight:boolean display_order:integer currency_symbol:string")
       template "app/models/plan.rb"
 
       # Add coupons.
